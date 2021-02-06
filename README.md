@@ -9,7 +9,7 @@ MJJs' awesome blogs.
 
 `www.yourdomain.com`为你的博客、米表、探针的域名，文件内容格式如下
 
-```json
+```javascript
 {
     "blogName": "你的站点名称", //必填
     "blogLink": "https://www.yourdomain.com",//必填，必须加https / http前缀
