@@ -1,0 +1,40 @@
+name: 'Check PR'
+on:
+    pull_request:
+      branches:
+        - main
+      paths:
+        - 'raw/**.json'
+jobs:
+  Check_PR:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v2
+
+      - name: 'Checkout Builder codes'
+        uses: actions/checkout@v2
+        with:
+          repository: MJJ-Studio/AwesomeBlogsBuilder
+          path: ./AwesomeBlogsBuilder
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: 'Install dependences'
+        run: |
+          npm install
+        working-directory: ./AwesomeBlogsBuilder
+
+
+      - name: 'Check PR'
+        id: files
+        uses: jitterbit/get-changed-files@v1
+      - run: |
+          for changed_file in ${{ steps.files.outputs.added_modified }}; do
+            mv ${changed_file} ./AwesomeBlogsBuilder/raw/
+          done
+          cd ./AwesomeBlogsBuilder
+          node test.js ${{ steps.files.outputs.added_modified }}
