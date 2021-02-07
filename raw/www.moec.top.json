@@ -1,0 +1,8 @@
+{
+    "blogName": "老兄de博客", //必填
+    "blogLink": "https://www.moec.top",//必填，必须加https / http前缀
+    "type": "tech", //必填 ["tech", "host", "life", "domain", "probe"] 中的类型
+    "description": "杂七杂八的分享~", //站点描述可选
+    "owner":"laoxong", //可选，你的Loc用户名
+    "locURL":"https://www.hostloc.com/space-uid-37533.html" //可选，这里是你的Hostloc空间地址 格式为https://www.hostloc.com/space-uid-xxx.html
+}
