@@ -1,0 +1,8 @@
+{
+    "blogName": "Honus's Blog", //必填
+    "blogLink": "https://www.honus.top",//必填，必须加https / http前缀
+    "type": "tech", //必填 ["tech", "host", "life", "domain", "probe"] 中的类型
+    "description": "Honus's Blog", //站点描述可选
+    "owner":"honus", //可选，你的Loc用户名
+    "locURL":"https://www.hostloc.com/space-uid-43196.html" //可选，这里是你的Hostloc空间地址 格式为https://www.hostloc.com/space-uid-xxx.html
+}
