@@ -3,6 +3,9 @@
 MJJs' awesome blogs.
 
 这里汇总了MJJ的博客、米表、探针
+
+因目前这个项目参与人数太少，处于无限期咕咕咕状态，提交的PR暂时会搁置不会Merge。
+
 ## 如何加入
 
 在`./raw`目录里新建 一个文件名为`www.yourdomain.com.json`
@@ -20,7 +23,7 @@ MJJs' awesome blogs.
 }
 ```
 
-注，type格式为["tech", "host", "life", "domain", "probe"]中的任意一个。
+**注意type格式为["tech", "host", "life", "domain", "probe"]中的任意一个。因为标准JSON不支持注释，一定要去掉注释再提交**
 
 tech为技术博客，host为主机博客，life为生活博客，domain为米表，probe为探针
 
